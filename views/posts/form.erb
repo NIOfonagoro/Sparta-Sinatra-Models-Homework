@@ -1,0 +1,18 @@
+<form action="/<%= @post.id %>" method="POST">
+  <div>
+    <label>Title</label>
+    <input type="text" name="last_name" placeholder="Enter a name" value="<%= @post.last_name%>">
+  </div>
+
+  <div>
+    <label>Email</label>
+    <textarea name="email"><%= @post.email %></textarea>
+  </div>
+
+  <div>
+    <input type="submit" value="Save Post">
+  </div>
+  <% if(@post.id) %>
+    <input type="hidden" name="_method" value="PUT">
+  <% end %>
+</form>
